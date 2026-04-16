@@ -1,0 +1,32 @@
+.neon {
+  color: #00ffcc;
+  text-shadow: 
+    0 0 5px #00ffcc,
+    0 0 10px #00ffcc,
+    0 0 15px #00ccff;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Arial', sans-serif;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  background-color: #00ccff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #0099cc;
+}
