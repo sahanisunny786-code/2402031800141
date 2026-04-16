@@ -2,7 +2,7 @@
 
 // Function to fetch weather data from API
 async function fetchWeather(city) {
-    const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+    const apiKey = 'a77e41c96b45de37c71dea01de233e08'; // Replace with your actual API key
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
     const data = await response.json();
     return data;
