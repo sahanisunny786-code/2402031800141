@@ -10,18 +10,19 @@ async function fetchWeather(city) {
 
 // Function to display weather data
 function displayWeather(data) {
-    const weatherContainer = document.getElementById('weather');
+    const weatherContainer = document.getElementById('weather-result');
     weatherContainer.innerHTML = `<h2>Weather in ${data.name}</h2>
                                    <p>Temperature: ${Math.round(data.main.temp - 273.15)}°C</p>
                                    <p>${data.weather[0].description}</p>`;
 }
 
-// Event listener for form submission
-document.getElementById('weather-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
+// Event listener for button click
+document.getElementById('get-weather').addEventListener('click', async () => {
     const city = document.getElementById('city-input').value;
-    const weatherData = await fetchWeather(city);
-    displayWeather(weatherData);
+    if (city) {
+        const weatherData = await fetchWeather(city);
+        displayWeather(weatherData);
+    }
 });
 
 // Initial call to fetch weather for default city
